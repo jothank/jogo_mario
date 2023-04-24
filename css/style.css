@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.button {
+  position: relative;
+  padding: 5px;
+  border-radius: 10%;
+  margin: 1em;
+}
+
 .game-board {
   width: 80%;
   height: 500px;
@@ -10,7 +18,7 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#87ceeb,#e8f6ff);
+  background: linear-gradient(#87ceeb, #e8f6ff);
 }
 
 .pipe {
@@ -26,11 +34,31 @@
   bottom: 0;
 }
 
+.gameover {
+  position: relative;
+  width: 380px;
+  bottom: 30%;
+  visibility: hidden;
+}
+
 .jump {
   animation: jump 500ms ease-out;
 }
 
-.cloud {}
+.cloud {
+  position: absolute;
+  width: 750px;
+  animation: clouds-animation 8s infinite linear;
+}
+
+@keyframes clouds-animation {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
 
 @keyframes pipe-animation {
   from {

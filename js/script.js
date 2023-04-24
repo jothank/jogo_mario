@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const gameover = document.querySelector('.gameover');
 
 const jump = () => {
     mario.classList.add('jump');
@@ -25,9 +26,15 @@ const loop = setInterval(() => {
         mario.style.width = '85px';
         mario.style.marginLeft = '50px';
 
+        gameover.style.visibility = 'visible';
+
         clearInterval(loop);
     }
 
 }, 10);
 
 document.addEventListener('keydown', jump);
+
+function recarregarAPagina() {
+    window.location.reload();
+} 
