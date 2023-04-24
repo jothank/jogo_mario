@@ -9,7 +9,7 @@ Este é um jogo do Mario simples em que o jogador controla o Mario para pular so
 3. Tente evitar os canos. Se o Mario colidir com um cano, o jogo termina.
 
 Clique abaixo para testar:
-https://jothank.github.io/jogo_mario/
+[jothank.github.io/jogo_mario](https://jothank.github.io/jogo_mario/)
 
 ## Estrutura do projeto
 
