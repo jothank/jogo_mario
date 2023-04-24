@@ -9,7 +9,14 @@
   padding: 8px 15px;
   font-weight: bold;
   border-radius: 5%;
-  margin: 1em;
+  margin: 2px;
+}
+
+.counter,
+.score {
+  position: relative;
+  font-weight: bold;
+  margin: 5px;
 }
 
 .game-board {

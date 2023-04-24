@@ -1,6 +1,9 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const gameover = document.querySelector('.gameover');
+const counter = document.querySelector('.counter');
+
+
 
 const jump = () => {
     mario.classList.add('jump');
@@ -10,6 +13,9 @@ const jump = () => {
     }, 500);
 
 }
+
+let pipePassed = false;
+let count = 0;
 
 const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
@@ -29,11 +35,19 @@ const loop = setInterval(() => {
         gameover.style.visibility = 'visible';
 
         clearInterval(loop);
+    } else if (pipePosition <= 80 && !pipePassed) {
+        pipePassed = true;
+        count++;
+        counter.innerHTML = count;
+        console.log(pipePassed);
+    } else if (pipePosition > 80) {
+        pipePassed = false;
     }
 
 }, 10);
 
 document.addEventListener('keydown', jump);
+document.addEventListener('touchstart', jump);
 
 function recarregarAPagina() {
     window.location.reload();
